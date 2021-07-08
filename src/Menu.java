@@ -1,7 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Menu extends JFrame{
+
+public class Menu extends JFrame implements ActionListener {
     JButton but_one = new JButton("1");
     JButton but_two = new JButton("2");
     JButton but_three = new JButton("3");
@@ -18,19 +21,25 @@ public class Menu extends JFrame{
     JButton but_clear = new JButton("CLEAR");
     JButton but_enter = new JButton("ENTER");
     JButton but_help = new JButton("HELP");
-    JLabel label = new JLabel();
+    JLabel label1 = new JLabel();
+    JLabel label2 = new JLabel();
+    public long p = 0;
 
     Menu(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(440,315);
         this.setResizable(false);
         this.setTitle("Enter your Valid PIN Number");
-        
-        this.add(label);
-        label.setBounds(5,5,415,45);
-        label.setText("Text");
-        label.setBackground(Color.red);
-        label.setOpaque(true);
+
+        this.add(label1);
+        this.add(label2);
+        label1.setBounds(205,5,212,45);
+        label2.setBounds(5,5,212,45);
+        label2.setText("Enter the Pin Number");
+        label1.setBackground(Color.red);
+        label2.setBackground(Color.yellow);
+        label1.setOpaque(true);
+        label2.setOpaque(true);
         this.add(but_one);
         but_one.setBounds(5,55,100,50);
         this.add(but_two);
@@ -64,7 +73,70 @@ public class Menu extends JFrame{
         this.add(but_help);
         but_help.setBounds(320,220,100,50);
 
+        but_one.addActionListener(this);
+        but_two.addActionListener(this);
+        but_three.addActionListener(this);
+        but_cancel.addActionListener(this);
+        but_four.addActionListener(this);
+        but_five.addActionListener(this);
+        but_six.addActionListener(this);
+        but_clear.addActionListener(this);
+        but_seven.addActionListener(this);
+        but_eight.addActionListener(this);
+        but_nine.addActionListener(this);
+        but_astrix.addActionListener(this);
+        but_zero.addActionListener(this);
+        but_ash.addActionListener(this);
+        but_help.addActionListener(this);
+
         this.setLayout(null);
         this.setVisible(true);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource()==but_one){
+            p  = (p*10)+1;
+            label1.setText(""+p);
+        }else if(e.getSource()==but_two){
+            p  = (p*10)+2;
+            label1.setText(""+p);
+        }else if(e.getSource()==but_three){
+            p  = (p*10)+3;
+            label1.setText(""+p);
+        }else  if(e.getSource()==but_cancel){
+
+        }else if(e.getSource()==but_four){
+            p  = (p*10)+4;
+            label1.setText(""+p);
+        }else  if(e.getSource()==but_five){
+            p  = (p*10)+5;
+            label1.setText(""+p);
+        }else if(e.getSource()==but_six){
+            p  = (p*10)+6;
+            label1.setText(""+p);
+        }else  if(e.getSource()==but_clear){
+            p = p/10;
+            label1.setText(""+p);
+        }else if(e.getSource()==but_seven){
+            p  = (p*10)+7;
+            label1.setText(""+p);
+        } else if(e.getSource()==but_eight){
+            p  = (p*10)+8;
+            label1.setText(""+p);
+        }else if(e.getSource()==but_nine){
+            p  = (p*10)+9;
+            label1.setText(""+p);
+        }else if(e.getSource()==but_astrix){
+            label1.invalidate();
+        }else if(e.getSource()==but_enter){
+
+        }else if(e.getSource()==but_zero){
+            p  = (p*10);
+            label1.setText(""+p);
+        }else if(e.getSource()==but_ash){
+
+        }else if(e.getSource()==but_help){
+
+        }
     }
 }
