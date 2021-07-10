@@ -34,6 +34,7 @@ public class Menu extends JFrame implements ActionListener {
 
     public Integer p = 0;
     Integer BalanceInt = 0;
+    Integer Balance = 0;
     public Integer decider = 0;
 
     HashMap<Integer,String> data = new HashMap<>();
@@ -240,7 +241,13 @@ public class Menu extends JFrame implements ActionListener {
                 amt_label.setText("Rs"+BalanceInt);
             }
         }else if(e.getSource()==but_enter){
-                action_page();
+                if(decider==0){
+                    action_page();
+                }else if(decider==1){
+                    deposite();
+                }else if(decider==2){
+                    withdrawl();
+                }
 
         }else if(e.getSource()==but_zero){
             if(decider==0) {
@@ -265,13 +272,13 @@ public class Menu extends JFrame implements ActionListener {
             help_label.setText(help);
 
         }else if(e.getSource()==but_s_one){
-
+            amt_label.setText("Rs "+Balance);
         }else if(e.getSource()==but_s_two){
             decider=1;
-
+            amt_label.setText("Enter the Amount");
         }else if(e.getSource()==but_s_three){
-            decider=1;
-
+            decider=2;
+            amt_label.setText("Enter the Amount");
         }
     }
     public void x_printer(){
@@ -288,7 +295,7 @@ public class Menu extends JFrame implements ActionListener {
 
     public void action_page(){
         if(data.containsKey(p)){
-            decider=2;
+            decider=3;
             JPanel action_panel = new JPanel();
             pane.add(action_panel,Integer.valueOf(0));
             action_panel.setBounds(85,10,255,245);
@@ -323,4 +330,19 @@ public class Menu extends JFrame implements ActionListener {
             p=0; pin_label.setText("Enter the Pin Number :");
         }
 }
+    public void deposite(){
+            Balance += BalanceInt;
+            BalanceInt= 0;
+            JOptionPane.showMessageDialog(null, "Successfully Deposited", "Success", JOptionPane.INFORMATION_MESSAGE);
+        }
+    public void withdrawl(){
+        if(BalanceInt<=Balance) {
+            Balance -= BalanceInt;
+            BalanceInt= 0;
+            JOptionPane.showMessageDialog(null, "Withdrawal Successful", "Success", JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(null, "Insufficient Fund", "Interrupted during the Transaction", JOptionPane.ERROR_MESSAGE);
+        }
     }
+
+}
