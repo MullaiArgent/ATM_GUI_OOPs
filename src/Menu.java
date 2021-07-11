@@ -1,7 +1,10 @@
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 
 
@@ -41,7 +44,8 @@ public class Menu extends JFrame implements ActionListener {
     JLayeredPane pane = new JLayeredPane();
 
 
-    Menu(){
+    Menu() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+        audio_notify("src/welcme.wav");
         data.put(4321,"987654");
         data.put(3210,"876543");
 
@@ -152,7 +156,7 @@ public class Menu extends JFrame implements ActionListener {
         this.setVisible(true);
     }
     @Override
-    public void actionPerformed(ActionEvent e){
+    public void actionPerformed(ActionEvent e) {
         if(BalanceInt>=20001){
             BalanceInt=20000;
             amt_label.setText("Rs"+BalanceInt);
@@ -192,6 +196,11 @@ public class Menu extends JFrame implements ActionListener {
                 amt_label.setText("Rs"+BalanceInt);
             }
         }else  if(e.getSource()==but_cancel){
+            try {
+                audio_notify("src/tq.wav");
+            } catch (UnsupportedAudioFileException | IOException | LineUnavailableException unsupportedAudioFileException) {
+                unsupportedAudioFileException.printStackTrace();
+            }
             this.dispose();
 
         }else if(e.getSource()==but_four){
@@ -276,18 +285,29 @@ public class Menu extends JFrame implements ActionListener {
             }
         }else if(e.getSource()==but_enter){
                 if(decider==0){
-                    action_page();
+                    try {
+                        action_page();
+                    } catch (UnsupportedAudioFileException | LineUnavailableException | IOException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
                 }else if(decider==1){
-                    deposite();
+                    try {
+                        deposit();
+                    } catch (UnsupportedAudioFileException | LineUnavailableException | IOException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
                 }else if(decider==2){
-                    withdrawl();
+                    try {
+                        withdrawal();
+                    } catch (UnsupportedAudioFileException | LineUnavailableException | IOException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
                 }
 
 
         }else if(e.getSource()==but_help){
             pane.add(help_label,Integer.valueOf(2));
             help_label.setBounds(85,5,255,245);
-            help_label.setBackground(Color.green);
             help_label.setOpaque(true);
             this.add(help_label);
             help_label.setVerticalAlignment(JLabel.CENTER);
@@ -320,13 +340,12 @@ public class Menu extends JFrame implements ActionListener {
             pin_label.setText(x);
     }}}
 
-    public void action_page(){
+    public void action_page() throws UnsupportedAudioFileException, IOException, LineUnavailableException{
         if(data.containsKey(p)){
             decider=3;
             JPanel action_panel = new JPanel();
             pane.add(action_panel,Integer.valueOf(0));
             action_panel.setBounds(85,10,255,245);
-            action_panel.setBackground(Color.blue);
             action_panel.setOpaque(true);
             action_panel.setLayout(null);
             this.add(action_panel);
@@ -353,23 +372,37 @@ public class Menu extends JFrame implements ActionListener {
             action_panel.add(amt_label);
 
         }else{
+            audio_notify("src/pswr_incrt.wav");
             JOptionPane.showMessageDialog(null,"Invalid Entry","Invalid Entry",JOptionPane.ERROR_MESSAGE);
             p=0; pin_label.setText("Enter the Pin Number :");
+
         }
 }
-    public void deposite(){
+    public void deposit() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
             Balance = Balance + BalanceInt;
             BalanceInt = 0;
+            audio_notify("src/sudfly_depo.wav");
             JOptionPane.showMessageDialog(null, "Successfully Deposited", "Success", JOptionPane.INFORMATION_MESSAGE);
         }
-    public void withdrawl(){
+    public void withdrawal() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         if(BalanceInt<=Balance) {
             Balance = Balance - BalanceInt;
             BalanceInt = 0;
+            audio_notify("src/wthdrwl_sussfl.wav");
             JOptionPane.showMessageDialog(null, "Withdrawal Successful", "Success", JOptionPane.INFORMATION_MESSAGE);
+
         }else{
+            audio_notify("src/insuf_bal.wav");
+            BalanceInt = 0;
             JOptionPane.showMessageDialog(null, "Insufficient Fund", "Interrupted during the Transaction", JOptionPane.ERROR_MESSAGE);
         }
     }
+    public  void audio_notify(String a) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file =new File(a);
+        AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+        Clip d = AudioSystem.getClip();
 
+        d.open(audio);
+        d.start();
+    }
 }
