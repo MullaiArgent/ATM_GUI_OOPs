@@ -401,7 +401,6 @@ public class Menu extends JFrame implements ActionListener {
         File file =new File(a);
         AudioInputStream audio = AudioSystem.getAudioInputStream(file);
         Clip d = AudioSystem.getClip();
-
         d.open(audio);
         d.start();
     }
