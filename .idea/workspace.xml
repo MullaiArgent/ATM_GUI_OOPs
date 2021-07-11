@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ATM_GUI_OOPs:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5e8b3a5b-724f-4a2d-93a7-63e0ac72dc93" name="Default Changelist" comment="Final Commit.&#10;Created the Executable(.exe) for the Project." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../../Program Files/Java/jdk-16.0.1/lib/src.zip!/java.desktop/java/awt/Container.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1v1mRLvae8Yt4h4LEgEpRiGi8ku" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.25487804" />
+    <property name="project.structure.side.proportion" value="0.24172664" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\GitHub\ATM_GUI_OOPs\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\GitHub\ATM_GUI_OOPs\src" />
+      <recent name="C:\Users\user\Documents\GitHub\ATM_GUI_OOPs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ATM_GUI_OOPs" />
+      <option name="PROGRAM_PARAMETERS" value="Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ATM_GUI_OOPs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ATM_GUI_OOPs.jar" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/ATM_GUI_OOPs_jar/ATM_GUI_OOPs.jar" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e8b3a5b-724f-4a2d-93a7-63e0ac72dc93" name="Default Changelist" comment="" />
+      <created>1625737960704</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625737960704</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1625739132814</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625739132814</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1625746122933</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625746122933</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial commit">
+      <created>1625746137356</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625746137356</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Pin Verifying Window Customized">
+      <created>1625750371702</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625750371702</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Pin Verifying Window Customized">
+      <created>1625750670561</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625750670561</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Button's Functions and Acc Number Verification is Updated.">
+      <created>1625763451186</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1625763451186</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Layer pane and Layout Update, Pin hiding and Help Button update.">
+      <created>1625887720538</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1625887720538</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Pin Verification and Amt field with the Button Specifications were added.">
+      <created>1625925150040</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1625925150040</updated>
+    </task>
+    <task id="LOCAL-00009" summary="withdraw and deposit methods Update">
+      <created>1625927968106</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1625927968106</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Bugs Fixed">
+      <created>1625977685433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1625977685433</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Audio prompts has been Added">
+      <created>1625979393164</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1625979393164</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Exceptions Handled">
+      <created>1625979461007</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1625979461007</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Final Commit.&#10;Created the Executable(.exe) for the Project.">
+      <created>1625986448128</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1625986448128</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Final Commit.&#10;Created the Executable(.exe) for the Project.">
+      <created>1625986593922</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1625986593922</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Pin Verifying Window Customized" />
+    <MESSAGE value="Button's Functions and Acc Number Verification is Updated." />
+    <MESSAGE value="Layer pane and Layout Update, Pin hiding and Help Button update." />
+    <MESSAGE value="Pin Verification and Amt field with the Button Specifications were added." />
+    <MESSAGE value="withdraw and deposit methods Update" />
+    <MESSAGE value="Bugs Fixed" />
+    <MESSAGE value="Audio prompts has been Added" />
+    <MESSAGE value="Exceptions Handled" />
+    <MESSAGE value="Final Commit.&#10;Created the Executable(.exe) for the Project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Commit.&#10;Created the Executable(.exe) for the Project." />
+  </component>
+</project>
