@@ -153,7 +153,9 @@ public class Menu extends JFrame implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e){
-        if(BalanceInt>100000000){
+        if(BalanceInt>=20001){
+            BalanceInt=20000;
+            amt_label.setText("Rs"+BalanceInt);
             JOptionPane.showMessageDialog(null,"Enter Maximum RS 20,000 for the transaction","Maximum Limit Exceeded",JOptionPane.WARNING_MESSAGE);
         }
         else if(e.getSource()==but_one){
@@ -161,6 +163,9 @@ public class Menu extends JFrame implements ActionListener {
                 p = (p * 10) + 1;
                 x_printer();
             }else if(decider==1){
+                BalanceInt = (BalanceInt * 10) + 1;
+                amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
                 BalanceInt = (BalanceInt * 10) + 1;
                 amt_label.setText("Rs"+BalanceInt);
             }
@@ -171,12 +176,18 @@ public class Menu extends JFrame implements ActionListener {
             }else if(decider==1){
                 BalanceInt = (BalanceInt * 10) + 2;
                 amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
+                BalanceInt = (BalanceInt * 10) + 2;
+                amt_label.setText("Rs"+BalanceInt);
             }
         }else if(e.getSource()==but_three){
             if(decider==0) {
                 p = (p * 10) + 3;
                 x_printer();
             }else if(decider==1){
+                BalanceInt = (BalanceInt * 10) + 1;
+                amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
                 BalanceInt = (BalanceInt * 10) + 1;
                 amt_label.setText("Rs"+BalanceInt);
             }
@@ -190,12 +201,18 @@ public class Menu extends JFrame implements ActionListener {
             }else if(decider==1){
                 BalanceInt = (BalanceInt * 10) + 4;
                 amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
+                BalanceInt = (BalanceInt * 10) + 4;
+                amt_label.setText("Rs"+BalanceInt);
             }
         }else  if(e.getSource()==but_five){
             if(decider==0) {
                 p = (p * 10) + 5;
                 x_printer();
             }else if(decider==1){
+                BalanceInt = (BalanceInt * 10) + 5;
+                amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
                 BalanceInt = (BalanceInt * 10) + 5;
                 amt_label.setText("Rs"+BalanceInt);
             }
@@ -206,21 +223,21 @@ public class Menu extends JFrame implements ActionListener {
             }else if(decider==1){
                 BalanceInt = (BalanceInt * 10) + 6;
                 amt_label.setText("Rs"+BalanceInt);
-            }
-        }else  if(e.getSource()==but_clear){
-            if (decider==0){
-                p = p/10;
-                x_printer();
-            }else if(decider==1){
-                BalanceInt = (BalanceInt / 10);
+            }else if(decider==2){
+                BalanceInt = (BalanceInt * 10) + 6;
                 amt_label.setText("Rs"+BalanceInt);
             }
+
+
 
         }else if(e.getSource()==but_seven){
             if(decider==0) {
                 p = (p * 10) + 7;
                 x_printer();
             }else if(decider==1){
+                BalanceInt = (BalanceInt * 10) + 7;
+                amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
                 BalanceInt = (BalanceInt * 10) + 7;
                 amt_label.setText("Rs"+BalanceInt);
             }
@@ -231,6 +248,9 @@ public class Menu extends JFrame implements ActionListener {
             }else if(decider==1){
                 BalanceInt = (BalanceInt * 10) + 8;
                 amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
+                BalanceInt = (BalanceInt * 10) + 8;
+                amt_label.setText("Rs"+BalanceInt);
             }
         }else if(e.getSource()==but_nine){
             if(decider==0) {
@@ -238,6 +258,20 @@ public class Menu extends JFrame implements ActionListener {
                 x_printer();
             }else if(decider==1){
                 BalanceInt = (BalanceInt * 10) + 9;
+                amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
+                BalanceInt = (BalanceInt * 10) + 9;
+                amt_label.setText("Rs"+BalanceInt);
+            }
+        }else if(e.getSource()==but_zero){
+            if(decider==0) {
+                p = (p * 10);
+                x_printer();
+            }else if(decider==1){
+                BalanceInt = BalanceInt * 10;
+                amt_label.setText("Rs"+BalanceInt);
+            }else if(decider==2){
+                BalanceInt = BalanceInt * 10;
                 amt_label.setText("Rs"+BalanceInt);
             }
         }else if(e.getSource()==but_enter){
@@ -249,14 +283,7 @@ public class Menu extends JFrame implements ActionListener {
                     withdrawl();
                 }
 
-        }else if(e.getSource()==but_zero){
-            if(decider==0) {
-                p = (p * 10);
-                pin_label.setText("" + p);
-            }else if(decider==1){
-                BalanceInt = BalanceInt * 10;
-                amt_label.setText("Rs"+BalanceInt);
-            }
+
         }else if(e.getSource()==but_help){
             pane.add(help_label,Integer.valueOf(2));
             help_label.setBounds(85,5,255,245);
@@ -273,10 +300,10 @@ public class Menu extends JFrame implements ActionListener {
 
         }else if(e.getSource()==but_s_one){
             amt_label.setText("Rs "+Balance);
-        }else if(e.getSource()==but_s_two){
+        }else if(e.getSource()==but_s_two){   //d
             decider=1;
             amt_label.setText("Enter the Amount");
-        }else if(e.getSource()==but_s_three){
+        }else if(e.getSource()==but_s_three){  // wd
             decider=2;
             amt_label.setText("Enter the Amount");
         }
@@ -331,14 +358,14 @@ public class Menu extends JFrame implements ActionListener {
         }
 }
     public void deposite(){
-            Balance += BalanceInt;
-            BalanceInt= 0;
+            Balance = Balance + BalanceInt;
+            BalanceInt = 0;
             JOptionPane.showMessageDialog(null, "Successfully Deposited", "Success", JOptionPane.INFORMATION_MESSAGE);
         }
     public void withdrawl(){
         if(BalanceInt<=Balance) {
-            Balance -= BalanceInt;
-            BalanceInt= 0;
+            Balance = Balance - BalanceInt;
+            BalanceInt = 0;
             JOptionPane.showMessageDialog(null, "Withdrawal Successful", "Success", JOptionPane.INFORMATION_MESSAGE);
         }else{
             JOptionPane.showMessageDialog(null, "Insufficient Fund", "Interrupted during the Transaction", JOptionPane.ERROR_MESSAGE);
